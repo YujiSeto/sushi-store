@@ -2,7 +2,6 @@
 
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 const Page = () => {
   return (
@@ -12,7 +11,7 @@ const Page = () => {
         <div className="mx-3">...</div>
         <Footer />
       </div>
-      <ThemeToggle />
+
     </div>
   );
 };
