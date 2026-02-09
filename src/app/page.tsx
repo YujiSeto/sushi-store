@@ -11,7 +11,6 @@ const Page = () => {
         <div className="mx-3">...</div>
         <Footer />
       </div>
-
     </div>
   );
 };
