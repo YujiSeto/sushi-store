@@ -3,7 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export const ProductsTabs = () => {
   return (
     <Tabs defaultValue="tab1">
-      <TabsList className="flex w-full">
+      <TabsList className="flex w-auto">
         <TabsTrigger value="tab1" className="flex-1">
           Tab 1
         </TabsTrigger>
@@ -11,8 +11,12 @@ export const ProductsTabs = () => {
           Tab 2
         </TabsTrigger>
       </TabsList>
-      <TabsContent value="tab1">Tab 1 content</TabsContent>
-      <TabsContent value="tab2">Tab 2 content</TabsContent>
+      <TabsContent value="tab1" className="mt-6">
+        Tab 1 content
+      </TabsContent>
+      <TabsContent value="tab2" className="mt-6">
+        Tab 2 content
+      </TabsContent>
     </Tabs>
   );
 };
