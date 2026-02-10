@@ -25,7 +25,7 @@ export const CartSideBar = () => {
           {cart.length > 0 && <div className="absolute size-3 bg-red-600 rounded-full -right-1 -top-1" />}
         </Button>
       </SheetTrigger>
-      <SheetContent className="p-4">
+      <SheetContent className="p-4 overflow-auto">
         <SheetHeader>
           <div className="flex items-center gap-2">
             <ShoppingCart />
@@ -48,7 +48,7 @@ export const CartSideBar = () => {
 
         <Separator className="my-4" />
 
-        <div className="text-center">
+        <div className="text-center mb-4">
           <Button disabled={cart.length === 0}>Complete Purchase</Button>
         </div>
       </SheetContent>

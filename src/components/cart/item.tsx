@@ -10,7 +10,7 @@ type Props = {
 export const CartItem = ({ item }: Props) => {
   return (
     <div className="flex items-center gap-5">
-      <div className="w-16 overflow-hidden">
+      <div className="w-16 rounded-md overflow-hidden">
         <img src={item.product.image} className="w-full h-auto object-cover" />
       </div>
       <div className="flex-1">
