@@ -4,12 +4,16 @@
 import { Product } from "@/types/product";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { useCartStore } from "@/stores/cart-store";
 
 type Props = {
   item: Product;
 };
 export const ProductItem = ({ item }: Props) => {
+  const { upsertCartItem } = useCartStore((state) => state);
+
   const handleAddButton = () => {
+    upsertCartItem(item, 1);
     toast.success("Product added to cart!", {
       description: item.name,
       duration: 3000,
