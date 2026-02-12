@@ -7,8 +7,11 @@ import { Separator } from "@/components/ui/separator";
 import { useCartStore } from "@/stores/cart-store";
 import { Cart } from "@/types/cart";
 import { CartItem } from "./item";
+import { useState } from "react";
+import { CheckoutDialog } from "@/components/checkout/dialog";
 
 export const CartSideBar = () => {
+  const [checkoutOpen, setCheckoutOpen] = useState(false);
   const { cart } = useCartStore((state) => state);
 
   let subtotal = 0;
@@ -49,8 +52,12 @@ export const CartSideBar = () => {
         <Separator className="my-4" />
 
         <div className="text-center mb-4">
-          <Button disabled={cart.length === 0}>Complete Purchase</Button>
+          <Button onClick={() => setCheckoutOpen(true)} disabled={cart.length === 0}>
+            Complete Purchase
+          </Button>
         </div>
+
+        <CheckoutDialog open={checkoutOpen} onOpenChange={setCheckoutOpen} />
       </SheetContent>
     </Sheet>
   );
