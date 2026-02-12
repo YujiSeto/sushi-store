@@ -9,7 +9,6 @@ type States = {
     district: string;
     city: string;
     state: string;
-    zipCode: string;
   };
 };
 
@@ -27,7 +26,6 @@ const initialState: States = {
     district: "",
     city: "",
     state: "",
-    zipCode: "",
   },
 };
 
