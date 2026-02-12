@@ -33,6 +33,11 @@ export const StepAddress = ({ setStep }: Props) => {
     setAddress(values);
     setStep("finish");
   };
+  const handleBack = () => {
+    const currentValues = form.getValues();
+    setStep("user");
+    setAddress(currentValues);
+  };
 
   return (
     <Form {...form}>
@@ -132,7 +137,7 @@ export const StepAddress = ({ setStep }: Props) => {
         </div>
 
         <div className="flex justify-between mt-4">
-          <Button variant="link" onClick={() => setStep("user")}>
+          <Button variant="link" type="button" onClick={handleBack}>
             Back
           </Button>
           <Button type="submit">Finish</Button>
