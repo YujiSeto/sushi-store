@@ -120,13 +120,13 @@ export const StepAddress = ({ setStep }: Props) => {
                       <SelectValue placeholder="State" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="mie">Mie</SelectItem>
-                      <SelectItem value="aichi">Aichi</SelectItem>
-                      <SelectItem value="gifu">Gifu</SelectItem>
-                      <SelectItem value="shizuoka">Shizuoka</SelectItem>
-                      <SelectItem value="tokyo">Tokyo</SelectItem>
-                      <SelectItem value="kanagawa">Kanagawa</SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
+                      <SelectItem value="Mie">Mie</SelectItem>
+                      <SelectItem value="Aichi">Aichi</SelectItem>
+                      <SelectItem value="Gifu">Gifu</SelectItem>
+                      <SelectItem value="Shizuoka">Shizuoka</SelectItem>
+                      <SelectItem value="Tokyo">Tokyo</SelectItem>
+                      <SelectItem value="Kanagawa">Kanagawa</SelectItem>
+                      <SelectItem value="Other">Other</SelectItem>
                     </SelectContent>
                   </Select>
                 </FormControl>
